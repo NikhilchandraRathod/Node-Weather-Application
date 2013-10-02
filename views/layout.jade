@@ -1,0 +1,22 @@
+doctype 5
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/css/bootstrap.css')
+    link(rel='stylesheet', href='/css/weather.css')
+  body
+  
+    #wrap
+        nav.navbar.navbar-default.navbar-static-top
+            .navbar-header
+                a.navbar-brand
+                    | Nik Weather App
+        
+        .container
+            block content
+            
+    #footer
+        .container
+            .text-muted.credit  Developed by: Nikhilchandra Rathod & Powered by:  
+                a(href="http://openweathermap.org/", target="_blank") Open Weather Map
+     

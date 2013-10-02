@@ -1,0 +1,35 @@
+extends layout
+
+block content
+    .row
+        .col-lg-12
+            form(action="/", method="POST")
+                .form-group
+                    .input-group
+                        input.form-control(type="text", id="txtCity", name="txtCity", placeholder="Enter city name")
+                        .input-group-btn
+                            button.btn.btn-primary(type="submit") Get
+                        
+                        
+    .row
+        .col-lg-12
+            if(error)
+                .alert.alert-danger
+                    = info
+            
+    if(error == false)
+        .row
+            .col-lg-12
+                .page-header
+                    h2 Temprature of #{city} :
+                    
+        .row
+            .col-lg-4
+                ul.list-group
+                    li.list-group-item Temp 
+                        span.badge #{info.temp} °C
+                    li.list-group-item Min Temp 
+                        span.badge #{info.temp_min} °C
+                    li.list-group-item Max Temp 
+                        span.badge #{info.temp_max} °C
+                
